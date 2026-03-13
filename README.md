@@ -7,6 +7,11 @@ This repository contains the numerical simulation code for the minimal formulati
 - `experiments.py`: Main script to run the 3 comparative regimes (No-geometry, No-Kairos, Full IWS).
 - `plotting.py`: Utilities to generate the macroscopic indicators and phase-space projection figures.
 
+The scripts reproduce:
+
+Figure 2 – system dynamics
+Figure 3 – state projection
+
 ## Requirements
 ```bash
 pip install numpy matplotlib
