@@ -71,18 +71,26 @@ def run_one(cfg: IWSConfig, seed: int) -> dict:
     }
 
 
-def growth_rate(o6: np.ndarray, dt: float, floor: float = 1e-30) -> float:
-    """Taux de croissance initial G sur la phase log-lineaire de O6."""
+def growth_rate(o6: np.ndarray, dt: float, floor: float = 1e-28) -> float:
+    """Taux log-lineaire de O6 sur le segment central de la phase pre-plancher.
+
+    ERRATUM E-X4b-G : la version anterieure ajustait, en cas de decroissance
+    immediate, sur les 10 PREMIERS PAS (phase balistique de rotation
+    position->vitesse de la perturbation), d'ou le G ~ -0.46 publie dans
+    RAPPORT_X0_X4b.md -- artefact de fenetre, pas un taux dynamique.
+    Reference corrigee (note T-1) : taux asymptotique au point actif
+    ~ -0.093 (spectral, flot) / -0.082 (mesure, evenements inclus).
+    """
     v = np.maximum(np.asarray(o6), floor)
-    # fenetre : de la premiere valeur > floor jusqu'a 50% du max (phase de croissance)
     above = np.where(v > 10 * floor)[0]
-    if len(above) < 10:
+    if len(above) < 100:
         return float("nan")
-    i0 = above[0]
-    i1 = min(i0 + max(10, np.argmax(v[i0:] > 0.5 * v.max())), len(v) - 1)
-    if i1 <= i0 + 5:
+    i0, i_end = int(above[0]), int(above[-1])
+    span = i_end - i0
+    a, b = i0 + int(0.2 * span), i0 + int(0.8 * span)
+    if b - a < 50:
         return float("nan")
-    coef = np.polyfit(np.arange(i0, i1) * dt, np.log(v[i0:i1]), 1)
+    coef = np.polyfit(np.arange(a, b) * dt, np.log(v[a:b]), 1)
     return float(coef[0])
 
 
