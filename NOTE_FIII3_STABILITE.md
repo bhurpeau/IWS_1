@@ -59,3 +59,15 @@ La dernière pièce conceptuelle demandée est en place, sous sa forme honnête 
 ---
 
 *Reproductibilité : `python fiii3_stabilite.py` (Y0 validation, Y1–Y5) ; consolidé : `output_theory/fiii3_report.json` ; figure : `output_theory/fiii3_stabilite.png`.*
+
+---
+
+## 8. Amendement F-III.3.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**A1 — Principe de réduction aux seuils (élévation de III-4c).** III-4(c) n'est pas un lemme technique : c'est **la** proposition de la note. Sous monotonicité, toute la combinatoire des histoires — le monoïde, ses préfixes, ses compositions — s'évapore et se projette sur un unique objet ordonné : l'ensemble de seuils Θ. **L'objet dynamique primitif du Tome III est la suite croissante Θ_{𝔅₁} ⊂ Θ_{𝔅₂} ⊂ ⋯ ; les partitions sont secondaires, induites** (couper la droite des contenus par Θ_𝔅). Généralisation (conditionnée à QO-60) : pour une famille de systèmes à d paramètres, Θ_𝔅 devient un ensemble d'hypersurfaces de commutation de codimension 1 et les classes des cellules — la structure d'intervalles est le cas d = 1 d'un fait plus général.
+
+**A2 — QO-59 requalifiée en QO-59′.** La dichotomie fini/infini était pauvre. La vraie question est la **géométrie de Θ_∞** : (i) fini — types en nombre fini, la limite projective est effective ; (ii) infini localement discret — types dénombrables, séparés, individuation « atomique » ; (iii) fermé d'intérieur vide non discret ; (iv) parfait de type Cantor — deux individus arbitrairement proches séparables à budget arbitrairement grand, individuation « fractale ». QO-59′ : *déterminer dans laquelle de ces classes tombe Θ_∞ sur un compact de contenus, et par quel mécanisme.*
+
+**A3 — Formulation canonique et garde anti-essentialiste (indissociables).** Est élevée au rang de formulation canonique du Tome III : **« toute sonde est déjà une histoire »** — l'observation n'est pas extérieure au système, elle participe à son devenir. Et c'est *précisément pourquoi* Θ ne doit jamais être essentialisé : Θ, ℓ, les classes et les résumés sont des propriétés du **couple (famille de systèmes × famille d'histoires)**, jamais du système seul. Notation désormais systématique : Θ_𝔅, ℓ_𝔅, ∼_𝔅 — le budget en indice, partout, y compris dans les énoncés informels. Les deux faces de la même monnaie : parce que l'observation écrit dans le système, ce qui est observable dépend de ce qu'on se donne le droit de faire vivre.
