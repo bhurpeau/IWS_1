@@ -93,3 +93,17 @@ Le Tome III possède désormais son espace : **le quotient de Nerode muni de son
 ---
 
 *Reproductibilité : `python fiii2_quotient.py` (X0 validation exacte contre F-III.0, X1–X5) ; résultats consolidés : `output_theory/fiii2_report.json`.*
+
+---
+
+## 8. Amendement F-III.2.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — L'objet canonique est ℓ, non d.** La Proposition III-3 se lit désormais sur ℓ elle-même : *pour toute mesure de complexité c, ℓ_c(X, Z) ≥ min(ℓ_c(X, Y), ℓ_c(Y, Z))*. Pour **toute** fonction φ strictement décroissante avec φ(+∞) = 0, la composée φ∘ℓ_c est alors une pseudo-ultramétrique — automatiquement, car φ(min(a,b)) = max(φ(a), φ(b)) pour φ décroissante — et toutes les φ∘ℓ_c partagent la même structure de boules. d = e^{−ℓ} n'est qu'un **représentant de commodité** (conservé dans les tableaux numériques), pas un choix canonique. La séparabilité ℓ est l'objet fondamental ; d, une métrique associée.
+
+**R2 — Littérature et requalification de III-3.** Le mécanisme est connu dans le cadre des automates et des métriques comportementales : la *shortest-distinguishing-word distance* d_sdw(L, K) = c^{|w|} (w = plus court mot distinguant) est une notion établie sur les automates déterministes, avec calcul par point fixe et axiomatisation quantitative — voir p. ex. arXiv:1806.11064 (§ d_sdw), arXiv:2404.13352 (axiomatisation complète), arXiv:2006.12465 (traitement coalgébrique) ; parenté classique : métrique de Baire sur les suites ; cousines quantitatives : métriques de bisimulation. **La Proposition III-3 est donc requalifiée : transposition d'un mécanisme connu, non théorème nouveau.** Sa preuve (élémentaire, autosuffisante) est conservée. Portée propre au programme IWS, non couverte par cette littérature : (i) les tests sont des **histoires physiques** d'un système hybride continu à mémoire, non des mots sur un alphabet fini ; (ii) la mesure de complexité est **arbitraire** (durée, dose, nombre d'épisodes) ; (iii) la **filtration de budgets** 𝔅₁ ⊂ 𝔅₂ ⊂ … et sa monotonie ; (iv) la correspondance conjecturée **boules ↔ résumés suffisants** (QO-58), sans équivalent identifié.
+
+**R3 — Terminologie.** Ce que F-III.2 établit est d'abord une **structure d'observabilité** : la séparation est définie par la première histoire qui distingue ; l'ultramétrique en est une *conséquence*, pas un point de départ. Le mot « géométrie » est rétrogradé partout où il suggérait une géométrie métrique riemannienne ou classique.
+
+**R4 — Modestie du §7.** « Le Tome III possède désormais son espace » → **« le Tome III possède un candidat naturel pour son espace »**. Le quotient dépend de la classe déclarée 𝔅 tant que sa stabilité sous enrichissement n'est pas comprise — c'est l'objet de F-III.3. L'orientation « les classes [X] comme types, les états physiques comme réalisations » (remarque 6 de la relecture) est enregistrée **sous la même condition** : elle ne devient officielle que si la structure se stabilise.
