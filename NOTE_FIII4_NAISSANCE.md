@@ -58,3 +58,15 @@ La stratégie « comprendre la naissance plutôt qu'explorer » a payé en une n
 ---
 
 *Reproductibilité : `python fiii4_naissance.py` (Z0 validation, Z1 classification, Z2/Z2b/Z2c carte génératrice, Z3 paire serrée) ; consolidé : `output_theory/fiii4_report.json` ; figure : `output_theory/fiii4_naissance.png`.*
+
+---
+
+## 8. Amendement F-III.4.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — Littérature et requalification de la typologie K/C.** Le type K appartient à une famille connue et abondamment étudiée : les **bifurcations induites par discontinuité** (*discontinuity-induced bifurcations*, DIB) des systèmes dynamiques lisses par morceaux et hybrides — grazing, border-collision, sliding (di Bernardo, Budd, Champneys, Kowalczyk, *Piecewise-smooth Dynamical Systems*, Springer ; revue : di Bernardo et al., Phil. Trans. R. Soc. A, doi:10.1098/rsta.2010.0198 ; SIAM Review, doi:10.1137/050625060 ; Simpson, arXiv:1006.4123). Nos « cellules de calendrier constant » correspondent aux cellules de **signature de solution** de cette littérature : la continuation numérique des systèmes PWS suit les orbites *à signature d'événements fixée* et détecte les DIB aux changements de signature (p. ex. doi:10.1007/s11071-024-10188-8). **La typologie K/C est donc requalifiée : transposition de la dichotomie « DIB / franchissement lisse », non découverte de mécanisme.** Portée propre au programme IWS : dans cette littérature, l'objet organisé par les signatures est une orbite, un cycle ou un équilibre ; ici c'est **Θ — la structure d'observabilité et d'individuation elle-même** — et les paramètres balayés sont le contenu mnésique et le protocole d'histoires, non un paramètre physique du champ. C-III.4 se reformule dans ce vocabulaire : *Θ_∞ serait stratifié par les signatures d'événements du couple (préfixe, contenu)* — ce qui la rend directement comparable aux résultats DIB existants.
+
+**R2 — Garde anti-essentialiste appliquée à C-III.4.** L'expression « individuation ponctuelle » est partout remplacée par **« individuation ponctuelle dans la famille d'histoires considérée »**. Sans ce suffixe, l'énoncé suggérerait une propriété intrinsèque du système — exactement ce que toute la construction récuse (F-III.3.1-A3).
+
+**R3 — Orientation enregistrée : le graphe des calendriers.** Les calendriers cessent d'être un outil d'instrumentation pour devenir des candidats-objets : sommets = calendriers chargés, arêtes = transitions K. Si F-III.5 établit que le calendrier est un résumé suffisant pour la naissance des seuils, ce graphe devient le squelette combinatoire du Tome III (une combinatoire de calendriers couplée à une dynamique continue sur chaque cellule). Orientation à formaliser après F-III.5, pas avant.
