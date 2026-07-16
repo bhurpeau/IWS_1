@@ -68,3 +68,29 @@ La garde anti-essentialiste a maintenant son infrastructure : tout objet du Tome
 ---
 
 *Reproductibilité : `python fiii7_admissibles.py` (U0 validation, U1 cartes aux deux résolutions, U2 conséquence sur ℓ) ; consolidé : `output_theory/fiii7_report.json`.*
+
+---
+
+## 11. Amendement F-III.7.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — « Lemme de transport par préfixe ».** Le Lemme III-7.1 est renommé ainsi, avec ℋ₀⁻¹𝔅 = {ℋ : ℋ₀·ℋ ∈ 𝔅} en tête d'énoncé ; « quotient à gauche » disparaît (risque de collision avec la terminologie des congruences latérales des monoïdes).
+
+**R2 — Stabilité par continuation commune.** L'énoncé premier est désormais : *l'équivalence complète est stable par continuation commune* — la terminologie algébrique (« congruence à droite », relative à la convention D-07) n'apparaît qu'entre parenthèses, après coup.
+
+**R3 — c-indépendance, version exacte (Prop. III-8 reformulée).** *À classe admissible 𝔅 fixée*, le quotient est indépendant de la mesure de complexité utilisée pour ordonner les histoires de 𝔅. Deux comparaisons distinctes : (i) même 𝔅, autre c → même quotient, autre géométrie ; (ii) budget *défini par* c (𝔅ᶜ_R = {c(ℋ) ≤ R}) → changer c change aussi la classe observée, donc potentiellement le quotient. La réserve rend le résultat exact.
+
+**R4 — Substituabilité affaiblie en résultat local.** §8 : « les deux axes sont substituables » devient **« substituabilité locale démontrée sur la paire E1 »** (compensation observationnelle : une séparation peut, *ici*, être obtenue soit par enrichissement des actions, soit par raffinement de la lecture). Aucune équivalence générale ∀Δ𝔅 ∃Δρ n'est démontrée ni revendiquée.
+
+**R5 — Les deux axes sont des posets, pas des chaînes.** Les budgets par ensembles inférieurs 𝔅_b⃗ sont partiellement ordonnés (davantage d'épisodes mais moins de dose : incomparables) ; les résolutions aussi (« ρ₂ raffine ρ₁ » est *défini* par l'existence de la factorisation π, les autres couples restant incomparables — nombre de Kairos, dose reçue, attracteur final, temps du premier événement sont typiquement incomparables deux à deux). Le système inverse vit sur le **poset produit multidimensionnel** ; toute suite 𝔅₁ ⊆ 𝔅₂ ⊆ ⋯ n'est qu'un *chemin choisi* dans ce poset — ne pas réifier un budget unique.
+
+**R6 — « Profil observationnel cohérent ».** La glose de la limite projective devient : *un profil observationnel complet est une famille cohérente de classes à tous les niveaux de budget et de résolution.* « État limite » disparaît (risque de confusion entre état physique, classe comportementale et élément de la limite).
+
+**R7 — Stratification de A-B3 : QO-71 close.** Trois niveaux remplacent la clause d'usage : (i) **classe admissible minimale** — ε ∈ 𝔅, paramètres déclarés, exécutions bien définies, lectures déterministes ; (ii) **classe préfixe-fermée** — ℋ₁·ℋ₂ ∈ 𝔅 ⟹ ℋ₁ ∈ 𝔅 (naturelle pour les budgets cumulatifs inférieurs) ; (iii) **classe stable par continuation** — requise pour la stabilité de l'équivalence sans changement de budget. Chaque théorème du tome annonce désormais le niveau dont il a besoin ; le résidu (annoter les théorèmes existants) rejoint l'audit QO-73.
+
+**R8 — Lectures terminales et lectures de chemin.** Distinction nommée et officielle : une **lecture terminale** est invariante par prolongation de la relaxation (O2) ; une **lecture de chemin** dépend du segment observé et de son origine temporelle, qui font partie de la déclaration de ρ. Les deux familles n'ont pas les mêmes propriétés et ne doivent jamais être confondues.
+
+**R9 — Convention éditoriale d'indexation.** Le couple (𝔅, ρ) est déclaré une fois par chapitre ou par expérience ; les indices sont ensuite omis tant qu'aucune ambiguïté n'est possible, et réapparaissent obligatoirement dans les énoncés comparatifs.
+
+**Formulation canonique enregistrée** : **« distinguabilité = puissance d'intervention + puissance de lecture. »**
