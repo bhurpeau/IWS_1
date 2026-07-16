@@ -288,7 +288,11 @@ fig, axs = plt.subplots(1, 3, figsize=(13.5, 4.0), sharey=True)
 ths = [e["theta"] for e in sec_th if e["bords"]]
 scs = [e["bords"][0] for e in sec_th if e["bords"]]
 axs[0].plot(ths, scs, "o-", color="#4878a8", ms=5, lw=1.2,
-            label="$\\Sigma_P \\cap$ section")
+            label="branche inferieure $s_c^-$")
+th2 = [e["theta"] for e in sec_th if len(e["bords"]) > 1]
+sc2 = [e["bords"][1] for e in sec_th if len(e["bords"]) > 1]
+axs[0].plot(th2, sc2, "^", color="#4878a8", ms=8, mfc="white",
+            label="branche superieure $s_c^+$ (fibre bornee)")
 axs[0].plot([r["theta"] for r in W4],
             [S_STAR - r["fac_mesuree"] for r in W4], "s",
             color="#c44e52", ms=5, alpha=0.8,

@@ -59,3 +59,25 @@ Le témoin anti-facilitant de F-III.6 (T_am = 5.5, D = 12) a pour coordonnées e
 ---
 
 *Reproductibilité : `python fiii9_frontiere.py` (W0 validation, W1–W2 sections, W3 fermeture, W4 facilitation, W5 activité, W6 témoin) ; consolidé : `output_theory/fiii9_report.json` ; figure : `output_theory/fiii9_frontiere.png`.*
+
+---
+
+## 9. Amendement F-III.9.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — Proposition III-10 renommée : « Suffisance de l'état lent aligné », avec son corollaire.** « Paramétrage » suggérait un système de coordonnées ; le résultat est plus fort : *sur la section de regraine alignée, l'histoire passée n'agit sur la sonde qu'à travers z*. Corollaire explicite : **z(X) = z(Y) ⟹ ℛ_X^ρ(𝒫) = ℛ_Y^ρ(𝒫)** — deux histoires produisant le même état lent sont indiscernables par la sonde déclarée. La fermeture 12/12 est la vérification expérimentale de ce quotient par z.
+
+**R2 — Preuve et validation, registres séparés.** Démontré analytiquement : invariance du sous-espace aligné ; absence de ssc dans la loi active ; déterminisme. Vérifié numériquement : les histoires testées produisent des états alignés au niveau machine, et les douze états synthétiques reproduisent les douze issues. La nullité exacte des résidus vient de l'invariance mathématique ; la mesure confirme que l'implémentation la respecte — deux registres, jamais mélangés.
+
+**R3 — Notation des branches.** s_c est réservée aux fibres à commutation unique. Dans les régions multicomposantes : Σ_θ = ∂A_θ, branches **s_c⁻(θ)** et **s_c⁺(θ)**. Conséquence conceptuelle actée : la facilitation n'est pas seulement l'abaissement d'un seuil inférieur — elle peut créer un **plafond d'appropriation** ; davantage de contenu n'est pas toujours préférable, même à état lent fixé. La figure est corrigée : la branche supérieure de la fibre θ = 0.10 apparaît désormais explicitement.
+
+**R4 — Section, projection, résidu transverse (triptyque officiel).** Fixer une coordonnée donne une *section* ; oublier une coordonnée donne une *projection* ; afficher un point réel sur une section de référence donne un *résidu transverse*. W4 compare des histoires à χ ≠ 0 à la section χ = 0 : les résidus sont des résidus transverses — et une partie des anciennes « lois de strate » étaient des projections ou des comparaisons à une section, pas des frontières complètes. Formulation canonique enregistrée : **« un résidu systématique peut être la trace d'une dimension lente omise. »**
+
+**R5 — P-III.6, version séparée.** Deux notions distinctes : la **structure géométrique** (Σ_𝒫 varie selon la coordonnée z_i — infinitésimale, ∂_{z_i}F ≠ 0 là où une représentation locale existe) et l'**activité décisionnelle** (l'ablation de z_i change l'issue ou la carte — opérationnelle). Elles coïncident près de la frontière, pas nécessairement loin d'elle (une frontière peut dépendre fortement de p sans que l'ablation de p ne change rien pour un point profond dans A_𝒫). Formulation exacte : *l'horloge structure la frontière lorsque Σ_𝒫 varie selon sa coordonnée ; elle est active en un point lorsque cette variation suffit à modifier la lecture choisie.*
+
+**R6 — Table W5, notation lisible.** Codage officiel : **0** (inactive), **L** (locale seulement), **P+L** (ponctuelle et locale). La table du §6 se relit : tardif — p:0, χ:0, θ:0 ; θ-vivant — p:0, χ:0, θ:P+L ; χ-vivant — p:0, χ:L, θ:L ; profond — p:P+L, χ:P+L, θ:P+L.
+
+**R7 — Portée de la clôture.** **QO-69 est close pour le témoin étudié et dans la famille alignée** ; d'autres mécanismes d'anti-facilitation ne sont pas exclus hors alignement ou sous une autre sonde. Le mécanisme de *ce* cas est identifié et quantifié.
+
+**R8 — Programme adopté pour QO-79 (méthode calendrier par calendrier).** Pas de cartographie uniforme aveugle : (1) identifier la signature événementielle de part et d'autre ; (2) localiser la frontière de changement de calendrier ; (3) cartographier Σ_𝒫 à calendrier fixé ; (4) vérifier comment les nappes se terminent, se croisent ou se replient au raccord. Objet global visé : **Σ_𝒫 = ⋃_C Σ_{𝒫,C}**, chaque morceau associé à une cellule de calendrier — nappes supérieures et îles pouvant naître des repliements ou des raccords. C'est le programme de F-III.10.
