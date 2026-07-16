@@ -48,3 +48,25 @@ Le centre du dispositif est maintenant démontré, pas seulement mesuré : *tout
 ---
 
 *Reproductibilité : `python fiii8_reduction.py` (T0 validation, T1 ω directe, T2 courbe d'exigence, T3 prédiction par translation, T5 mécanisme de l'anti-monotonie) ; consolidé : `output_theory/fiii8_report.json` ; figure : `output_theory/fiii8_reduction.png`.*
+
+---
+
+## 6. Amendement F-III.8.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — La section d'extinction, nommée ; le statut exact de III-9.** On pose Σ_ext = {p = χ = θ = 0, (x, v) = regraine}. Le théorème III-9 **ne** montre **pas** que s est une mémoire universellement suffisante : il montre que, *sur la section Σ_ext*, X ↦ s⃗ est un **paramétrage suffisant de la réponse future**. La réduction porte sur l'état que l'histoire laisse dans cette section, non sur l'histoire comme objet abstrait. III-9 décrit une section de la frontière générale — jamais un principe concurrent de F-III.9.
+
+**R2 — Notation.** La carte d'issue est renommée **Ω_{𝒫,ρ}** (ω est réservée aux ensembles limites et aux pulsations des Tomes I–II) : ℛ_X^ρ(𝒫) = Ω_{𝒫,ρ}(s⃗_regraine). Tous les ω de cette note se lisent Ω.
+
+**R3 — C2, version exacte : la monotonie qui compte est celle de l'application d'écriture totale.** S : s₀ ↦ s₀ + δ(s₀). Un retournement exige S′ = 1 + δ′ < 0, pas seulement δ′ < 0. Reformulation : *tout motif non monotone vient soit de la géométrie multicomposante de A_Ω, soit de la non-monotonie de S, soit de leur composition.* Le témoin T5 relève du premier cas : S croissante traversant l'île interne.
+
+**R4 — L'objet du plan (s, T₂) est un ensemble, pas une courbe.** Σ_nue = {(s, T₂) : s ∈ ∂A_{Ω_{T₂}}} ; pour chaque T₂, la fibre est vide (sonde stérile ou tout-appropriante sur la plage), réduite à un point (commutation unique), ou multiple (îles). La « courbe d'exigence » de T2 se renomme **« première commutation détectée de la sonde nue »** — une branche de Σ_nue — sauf là où l'unicité a été vérifiée (T₂ = 80, T1). Raccord : F-III.4 = stratification des seuils par calendriers de préfixes ; F-III.8 = stratification propre de la sonde ; F-III.9 = frontière complète de leur composition dans l'état lent.
+
+**R5 — Portée des clôtures.** QO-64 est close **sur le domaine atteignable déclaré dans ce protocole** : Ω₆₀ ne commute pas sur [2·10⁻⁴, 0.06], et le contenu à la regraine n'a jamais excédé ≈ 0.037 dans les familles utilisées (F-III.6-V1 : écriture ≤ 0.024 ; plage s₀ ≤ 0.0135) — 0.06 couvre l'atteint observé avec marge, sans constituer une borne démontrée de l'atteignable. Même prudence pour T₂ = 140 : tout-approprié *sur la plage testée*.
+
+**R6 — Corollaire C3 (équivalence par contenu survivant).** s⃗_regraine(X) = s⃗_regraine(Y) ⟹ X ∼_{𝔅,ρ} Y, pour toute classe 𝔅 de sondes démarrant sur la même regraine et satisfaisant les hypothèses de III-9. Ω ne voit pas « contenu initial + écriture » : elle ne voit que leur somme — la décomposition s₀ + δ est historique, inaccessible au système. La réduction devient un **résultat d'équivalence**, pas seulement une prédiction d'issue ; c'est le théorème de compression III-1 retrouvé et renforcé sur Σ_ext.
+
+**R7 — Schéma de preuve enregistré pour QO-74** (III-9b) : (1) fixer une cellule de calendrier ; (2) dépendance régulière du flot et instants d'événements transverses ; (3) borne lipschitzienne ‖Exec(z) − Exec(z′)‖ ≤ C‖z − z′‖ dans la cellule ; (4) marge à la frontière d'issue ; (5) exclusion explicite d'un voisinage des grazing/K.
+
+**R8 — Adopté pour F-III.9** : la définition d'activité d'une horloge se déclinera en trois niveaux — **ponctuelle** (l'ablation change l'issue en z), **locale** (elle change la carte sur un voisinage), **globale sur 𝔅** (elle change au moins une réponse de la classe) — pour ne pas confondre une cellule fragile avec une variable structurante.
