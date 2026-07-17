@@ -39,3 +39,29 @@ Le chapitre 12 a maintenant sa conclusion stabilisée et testée : *une surface 
 ---
 
 *Reproductibilité : `python fiii11_dualite.py` (Y0 validation, Y1 axe p, Y2 axe T₂, Y3 propensions) ; consolidé : `output_theory/fiii11_report.json`.*
+
+---
+
+## 6. Amendement F-III.11.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — Le mécanisme T₂, version exacte.** « Exécution identique jusqu'à la coupure » → *les trajectoires coïncident sur leur intervalle commun, avant la première des deux coupures* : même préfixe d'exécution → coupures à deux instants → deux états terminaux. Rapprochement enregistré : les deux protocoles partagent le même mot jusqu'à une troncature différente.
+
+**R2 — K et C par listes positives.** **K** : apparition ou disparition d'un événement ; modification de l'ordre ; changement de branche de franchissement ; changement du statut chargé/vide. **C** : même cellule de signature ; dérive continue des dates ; déformation de l'état au découplage ou à la lecture ; traversée de la frontière par cette déformation. Conséquence actée : *une même coordonnée peut être C dans une région et K dans une autre* — y compris p, dont le test n'exclut pas un comportement K ailleurs.
+
+**R3 — K/C est relatif à ρ.** L'échec du candidat p se lit exactement : **« aucun changement K n'est détecté pour le calendrier *chargé* utilisé comme signature »** — la pression déclenche des Kairos vides, invisibles à cette résolution. À une résolution comptant tous les événements, l'axe p pourrait être classé autrement. Raccord officiel à F-III.7 : la classification K/C porte, comme tout le reste, ses indices — K/C = K/C(𝒫, z, direction, **ρ**).
+
+**R4 — Propensions attachées aux familles.** Formulation exacte : *dans les familles canoniques testées*, la composition des préfixes a produit uniquement des K, tandis que les variations de condition lente et de durée à l'intérieur d'une marche ont majoritairement ou exclusivement produit des C. Heuristique de recherche, pas loi.
+
+**R5 — Fibres et vocabulaire.** La fibre correcte d'un axe z_i est A_𝒫^{(z_i)} = {z_i : (z_i, z_{−i}) ∈ A_𝒫}, une union d'intervalles ; le mot « seuil » au singulier est réservé aux sections explicitement monotones. Les micro-bandes sont des composantes de fibre, pas des anomalies.
+
+**R6 — QO-83 reformulée (question unificatrice).** *Les plafonds sur les différents axes (s, θ, p) sont-ils les traces de repliements d'une même frontière relativement à la séparatrice autonome ?* — avec les cinq mécanismes candidats enregistrés (fenêtre d'instabilité, phase des boosts, branche résistante, zone de découplage, dépassement d'une région appropriante bornée).
+
+**R7 — K/C comme propriété d'un chemin (définition adoptée).** Soit γ : λ ↦ (z(λ), 𝒫(λ)) un chemin paramétré. La transition en λ₀ est **C** si Exec_{γ(λ)} reste dans une même cellule de signature autour de λ₀ ; **K** si la signature y change. Ni l'axe ni la variable n'est K ou C en soi.
+
+**R8 — QO-82 en test différentiel (programme adopté).** À calendrier fixé, chaque événement vérifie h_j(t_j ; λ) = 0 ; sous transversalité, t_j(λ) est régulière. **Marge combinatoire** : m_cal = min{|∂_t h_j|, |t_{j+1} − t_j|, |t_j − T₂|, |χ(t_j) − χ_min|}. Marge strictement positive ⟹ petite variation C ; marge → 0 ⟹ direction candidate K (grazing, collision d'ordre, changement de statut, entrée/sortie à la coupure).
+
+**R9 — Figure du tome.** Légende à sortir de la zone de données (joint à l'audit QO-73).
+
+**R10 — Conclusion officielle du chapitre 12 (enregistrée).** *Dans une cellule où le calendrier reste structurellement constant, l'exécution dépend continûment des conditions initiales et des paramètres ; la frontière d'appropriation peut alors se plier, se replier et créer des composantes bornées. Aux points où la succession informative des événements se recompose, les morceaux de frontière sont raccordés par une transition de type K. La distinction ne porte pas sur la nature « étatique » ou « protocolaire » de la direction parcourue, mais sur son effet local sur l'exécution.* Versions courtes : déformation continue ⟹ pli C ; recomposition événementielle ⟹ raccord K. Formulation canonique enregistrée : **« la nature d'une direction importe moins que ce qu'elle fait à l'exécution. »**
