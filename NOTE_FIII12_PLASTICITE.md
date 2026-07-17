@@ -47,3 +47,27 @@ Avec cette note, chaque chapitre du plan du Tome III possède son matériau : Pa
 ---
 
 *Reproductibilité : `python fiii12_plasticite.py` (Z0 validation bit à bit, Z1 histoires égalisées, Z2 détection et s\*(γ), Z3 fermeture étendue, Z4 indiscernabilité) ; consolidé : `output_theory/fiii12_report.json`.*
+
+---
+
+## 8. Amendement F-III.12.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — Théorème III-11 renommé : « Non-identifiabilité observationnelle de la plasticité de la loi ».** C'est une **équivalence de présentation** : (Ψ, 𝒢_pl) ≡_ℛ (Ψ ⊕ γ, 𝒢_fig). Ce qui est indiscernable n'est pas la plasticité comme effet — elle est détectable — mais sa **localisation formelle** dans la décomposition état/loi. Le titre antérieur (« indiscernabilité de la plasticité ») est retiré.
+
+**R2 — Vocabulaire de l'égalisation.** « Même état lent » → **« même résumé lent à quatre coordonnées »** (z₄ = (p, χ, θ, s), déclaré) : c'est précisément le résultat que l'état complet ne l'était pas.
+
+**R3 — La frontière espèce/individu : conventionnelle, pas arbitraire.** Elle dépend d'un **choix de factorisation du modèle**, contraint par l'équivalence dynamique — « déclarative » se lit ainsi, jamais comme licence.
+
+**R4 — Le spectre des horloges : candidat, pas invariant.** QO-85 est substantielle : ni l'unicité du nombre minimal d'horloges, ni l'identifiabilité des τ, ni l'impossibilité de spectres différents pour un même comportement, ni l'irremplaçabilité d'une horloge non linéaire par plusieurs horloges simples ne sont établies. Terme adopté : **candidat invariant observationnel** (« signature dynamique minimale recherchée ») ; « spectre » devra être précisé — {τ_i} seuls, ou (τ_i, lois d'usage, couplages, dimension).
+
+**R5 — Domaine de validité du théorème, explicite.** **Plasticité causale, markovienne, réalisable par état augmenté.** Dans cette classe, la résolution de QO-56 est **complète** ; hors de cette classe, c'est QO-84 — et la vraie coupure du chapitre s'énonce : **mémoire réalisable dans un état markovien fini / mémoire irréductiblement historique** (candidate à conclusion forte du tome).
+
+**R6 — Corollaire explicite (ajouté au théorème).** *Aucune expérience comportementale ne peut distinguer deux présentations dynamiquement identiques.*
+
+**R7 — Portée du « pour toute (𝔅, ρ) ».** Exactement : *pour toute classe d'histoires et toute lecture définies sur ces exécutions* — l'équivalence est structurelle, elle ne doit rien à un choix de budget.
+
+**R8 — Deux niveaux de détectabilité (structure officielle du chapitre 13).** (i) Détectabilité relative au résumé déclaré : z₄ ne ferme plus ; (ii) détectabilité d'une dynamique lente supplémentaire : histoires appariées, réponses différentes, une cinquième variable restaure la fermeture. Ce qui n'est pas détectable : l'appartenance de cette variable à l'état, à la loi, à l'interface ou à un support caché. Structure : **détecter une insuffisance → identifier une horloge → échouer à localiser son support ontologique.**
+
+**R9 — Conclusion officielle du chapitre 13 (enregistrée).** *L'observation comportementale permet d'identifier qu'un résumé est incomplet et de reconstruire une dynamique supplémentaire. Elle ne permet pas, en général, de décider si cette dynamique est une propriété plastique de la loi ou une variable d'état cachée.* Garde-fou d'interprétation, noté pour la portée applicative (systèmes adaptatifs, IA) : « le comportement a changé, donc la règle a appris » est une surinterprétation — on conclut seulement qu'un état ou une loi non déclaré intervient.
