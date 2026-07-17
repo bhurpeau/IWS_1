@@ -40,3 +40,29 @@ Le chapitre 12 a maintenant sa forme vraie : la surface de commutation n'est pas
 ---
 
 *Reproductibilité : `python fiii10_raccord.py` (X0 validation, X1 carte, X2 classification K/C à signature complète, X3 terminaisons) ; consolidé : `output_theory/fiii10_report.json` ; figure : `output_theory/fiii10_raccord.png`.*
+
+---
+
+## 7. Amendement F-III.10.1 (post-relecture)
+
+Les formulations suivantes **supersèdent** le corps de la note.
+
+**R1 — Statut du résultat.** Ce n'est pas une absence de preuve : c'est une **réfutation empirique dans la section étudiée** — et ce sont précisément les structures les plus riches (bande, plafond, fermeture, ligne morte, bascule) qui sont C.
+
+**R2 — « Pli » : trois niveaux formels.** (i) *Repli de section* : une fibre contient plusieurs points de frontière (s₋, s₊) — suffit pour parler de bande bornée ; (ii) *pli local régulier* : F = 0, ∂ₛF = 0, ∂ₛ²F ≠ 0, ∂_θF ≠ 0 ; (iii) *fronce* : dégénérescence supplémentaire ∂ₛ²F = 0, ∂ₛ³F ≠ 0. La fermeture de la bande est requalifiée : **« configuration compatible avec une fronce, à confirmer par localisation fine et forme normale »** (QO-80).
+
+**R3 — La ligne morte : pas d'explication anticipée.** « Anti-résonance » est rétrogradée d'explication à intuition. Cinq mécanismes candidats sont enregistrés (durée d'instabilité du repos ; taux de croissance dans la fenêtre ; déphasage aux boosts ; passage par la branche résistante ; compensation M(θ)/Γ(θ)). QO-80 restructurée : décomposer la sonde en **temps d'ouverture, gain intégré, position finale relativement à la séparatrice** ; diagnostic candidat G(θ, s) = ∫₀^{T₂} λ⁺_max(t; θ, s) dt — premier détecteur, sans prétention de prédire seul la capture non linéaire.
+
+**R4 — « C strict », définition positive et contrôle de robustesse.** C strict = *même nombre d'événements, même ordre, mêmes branches de franchissement, dépendance continue des dates* ; le critère numérique (seuil 5 u) n'est qu'un détecteur. Contrôle explicite : dérives observées ≤ 0.15 u ≪ 5 u — même une réduction forte du seuil ne requalifierait rien.
+
+**R5 — Taxonomie locale enregistrée pour le chapitre.** Élévation du témoin → raccord K ; plafond de bande → pli C ; mort de la bande → candidat fronce C ; ligne morte → réorganisation continue C. Deux formes semblables dans la carte d'issue peuvent avoir des mécanismes distincts.
+
+**R6 — Σ_𝒫 = ⋃_C Σ_{𝒫,C}, maniement.** Ce sont des restrictions (Σ_{𝒫,C} = Σ_𝒫 ∩ C), pas une correspondance nappe ↔ cellule : plusieurs branches peuvent vivre dans une cellule, une branche peut y mourir, un bord de cellule peut ne porter aucune transition. Formulation adoptée : **« le calendrier fournit une stratification auxiliaire de l'espace, au sein de laquelle la frontière possède sa propre géométrie. »**
+
+**R7 — Formulation unificatrice candidate du chapitre 12 (adoptée).** À calendrier fixé, Exec_C(z, 𝒫) est régulière (sous transversalité) et la frontière vient des zéros d'une fonctionnelle continue F_C ; aux bords de cellules, on change de branche d'exécution. **Σ = zéros des F_C à l'intérieur des cellules + raccords entre F_C aux bords** — ni le calendrier ni la géométrie continue n'est privilégié ; chacun a sa place. Conclusion candidate du chapitre : *une surface pliée à l'intérieur de cellules hybrides, ponctuellement recousue lorsque le calendrier change.*
+
+**R8 — Portées exactes.** « Démontrée dans l'axe protocole » → **« démontrée sur l'axe T_am de la famille canonique étudiée »** (F-III.5) ; « réfutée dans l'axe état » → **« réfutée comme description exhaustive sur la section (θ, s) à p = χ = 0 »** (cette note). C-III.10 généralise ; les faits restent attachés à leurs familles.
+
+**R9 — Figure du tome.** Corrigée : transitions K en rouge, C en noir, et les quatre mécanismes annotés sur la carte.
+
+**R10 — Anticipation enregistrée pour QO-81.** Attendu : C-III.10 **affaiblie en propension**, pas confirmée en dichotomie — les directions de protocole plus propices aux K, les directions d'état plus propices aux plis C, les deux mécanismes possibles des deux côtés. C'est le programme de F-III.11.

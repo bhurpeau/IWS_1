@@ -130,7 +130,7 @@ def type_trans(a, b):
     return "C"
 
 
-trans = {"K": 0, "C": 0, "K_compte": 0, "detail_C": []}
+trans = {"K": 0, "C": 0, "K_compte": 0, "detail_C": [], "toutes": []}
 paires = [((TH[i], s), (TH[i + 1], s)) for i in range(len(TH) - 1)
           for s in SS] + \
          [((th, SS[j]), (th, SS[j + 1])) for th in TH
@@ -139,6 +139,7 @@ for a, b in paires:
     if ISS[a] != ISS[b]:
         t = type_trans(a, b)
         trans[t] += 1
+        trans["toutes"].append({"a": list(a), "b": list(b), "type": t})
         if t == "K" and NN[a] != NN[b]:
             trans["K_compte"] += 1
         if t == "C":
@@ -151,7 +152,7 @@ print(f"  transitions d'issue : {n_tot} ; K (compte ou saut de date "
       flush=True)
 for d in trans["detail_C"][:8]:
     print(f"    C : {d['a']} -> {d['b']} (n = {d['n']})", flush=True)
-OUT["X2"] = {"K": trans["K"], "C": trans["C"], "K_compte": trans["K_compte"],
+OUT["X2"] = {"K": trans["K"], "C": trans["C"], "K_compte": trans["K_compte"], "toutes": trans["toutes"],
              "detail_C": trans["detail_C"][:20]}
 
 # ------------------------------------------------------------------- X3
@@ -203,6 +204,26 @@ handles = [mpatches.Patch(color=cmap(i / max(1, len(nvals) - 1)),
 handles.append(mpatches.Patch(facecolor="white", edgecolor="k",
                               label="bord noir = approprie"))
 ax.legend(handles=handles, fontsize=8, loc="upper right", ncol=2)
+for tr in trans["toutes"]:
+    (ta, sa), (tb, sb) = tr["a"], tr["b"]
+    col_t = "#d62728" if tr["type"] == "K" else "#222222"
+    lw_t = 2.4 if tr["type"] == "K" else 1.0
+    ax.plot([ta, tb], [sa, sb], "-", color=col_t, lw=lw_t, alpha=0.9,
+            zorder=3)
+ax.plot([], [], "-", color="#d62728", lw=2.4, label="transition K")
+ax.plot([], [], "-", color="#222222", lw=1.0, label="transition C")
+ax.annotate("plafond $s_c^+$ (pli C)", (0.100, 0.0187),
+            xytext=(0.062, 0.0205), fontsize=8,
+            arrowprops=dict(arrowstyle="->", lw=0.8))
+ax.annotate("fermeture de bande\n(candidat fronce, C)", (0.1025, 0.013),
+            xytext=(0.118, 0.0165), fontsize=8,
+            arrowprops=dict(arrowstyle="->", lw=0.8))
+ax.annotate("ligne morte (C)", (0.105, 0.004),
+            xytext=(0.088, 0.0015), fontsize=8,
+            arrowprops=dict(arrowstyle="->", lw=0.8))
+ax.annotate("raccords K\n(flanc droit)", (0.122, 0.004),
+            xytext=(0.135, 0.007), fontsize=8,
+            arrowprops=dict(arrowstyle="->", lw=0.8))
 ax.set_xlabel("$\\theta$")
 ax.set_ylabel("$s$")
 ax.set_title("F-III.10 -- la region de reorganisation : calendrier n "
